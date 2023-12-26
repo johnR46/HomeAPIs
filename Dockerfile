@@ -18,4 +18,5 @@ COPY . .
 
 RUN poetry install --without dev
 
-ENTRYPOINT ["poetry", "run", "python", "-m", "main"]
+#ENTRYPOINT ["poetry", "run", "python", "-m", "main"]
+CMD ["python", "main.py"]
