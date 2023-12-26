@@ -18,5 +18,5 @@ COPY . .
 
 RUN poetry install --without dev
 EXPOSE 8080
-#ENTRYPOINT ["poetry", "run", "python", "-m", "main"]
-CMD ["python", "main.py"]
+ENTRYPOINT ["poetry", "run", "python", "-m", "main"]
+#CMD ["python", "main.py"]
