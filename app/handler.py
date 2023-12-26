@@ -5,6 +5,7 @@ from fastapi import FastAPI, Request
 from starlette.middleware.cors import CORSMiddleware
 
 from app.apis import users
+from app.apis import items
 
 origins = ['*']
 
@@ -45,3 +46,4 @@ async def add_process_time_header(request: Request, call_next):
 
 # add endpoint
 app.include_router(users.router)
+app.include_router(items.router)
