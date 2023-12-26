@@ -17,6 +17,6 @@ RUN poetry install --without dev --no-root && rm -rf $POETRY_CACHE_DIR
 COPY . .
 
 RUN poetry install --without dev
-
+EXPOSE 8080
 #ENTRYPOINT ["poetry", "run", "python", "-m", "main"]
 CMD ["python", "main.py"]
