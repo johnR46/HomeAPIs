@@ -83,7 +83,11 @@ jobs:
       # helper for authentication
       - run: |-
           gcloud --quiet auth configure-docker
-  
+
+      - name: Add commands directory to PATH
+        run: |-
+          echo "/HolismHolding/Commands" >> $GITHUB_PATH
+
       # Build the Docker image
       - name: Build
         run: |-
@@ -97,6 +101,8 @@ jobs:
       - name: Publish
         run: |-
           docker push "gcr.io/$PROJECT_ID/$IMAGE:latest"
+
+      
 
       # Deploy to Cloud RUN
       - name: Deploy
