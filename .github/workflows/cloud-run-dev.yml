@@ -54,7 +54,7 @@ env:
   SERVICE: home-apis # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
   IMAGE: home-apis-dev
-
+  
 jobs:
   deploy:
     # Add 'id-token' with the intended permissions for workload identity federation
