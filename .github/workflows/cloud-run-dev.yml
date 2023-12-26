@@ -55,12 +55,12 @@ env:
 
 jobs:
   setup-build-deploy:
-    name: Setup, Build, and Deploy
-    runs-on: ubuntu-latest
-
     permissions:
       contents: 'read'
       id-token: 'write'
+
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
